@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onchangeFun() {
+            alert("选择已经改变了");
+        }
+        window.onload = function () {
+            //1.获取标签对象
+           var selobj = document.getElementById("sel01");
+           alert(selobj);
+           // 2.通过标签对象.事件名 = function (){}
+            selobj.onchange = function () {
+                    alert("Yoh have changed");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 静态注册onchange事件 -->
+    <select onchange="onchangeFun();">
+        <option>--Hello--</option>
+        <option>--ps4--</option>
+        <option>--switch--</option>
+        <option>--bo--</option>
+        <!-- 动态注册onchange事件 -->
+        </select>
+    <br/>
+        <select id="sel01">
+            <option>--x--</option>
+            <option>--s4--</option>
+            <option>--itch--</option>
+            <option>--bo--</option>
+
+    </select>
+</body>
+</html>
