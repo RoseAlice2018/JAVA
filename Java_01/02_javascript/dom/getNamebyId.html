@@ -14,12 +14,15 @@
             let usernameText=usernameobj.value;
             //正则表达式匹配
             let patt = /^\w{8,16}$/;
+            let checkobj=document.getElementById("UsernameSpan");
             if(patt.test(usernameText))
             {
-                alert("legal");
+               // alert("legal");
+                checkobj.innerHTML=" <img src=\"right.png\" width=\"15\" height=\"16\">"
             }
             else{
-                alert("illegal");
+               // alert("illegal");
+                checkobj.innerHTML=" <img src=\"wrong.png\" width=\"15\" height=\"16\">"
             }
         }
     </script>
@@ -27,5 +30,8 @@
 <body>
     用户名：<input type="text" id="username">
     <button value="check" onclick="onclikFun()">check</button>
+    <span id="UsernameSpan" style="color: pink;">
+
+    </span>
 </body>
 </html>
