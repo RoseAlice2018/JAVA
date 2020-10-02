@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        let languagename=document.getElementsByName("language");
+        function checkalll() {
+            for(let i=0;i<languagename.length;i++)
+            {
+                languagename[i].checked=true;
+            }
+        }
+        function Not() {
+            for(let i=0;i<languagename.length;i++)
+            {
+                languagename[i].checked=false;
+            }
+        }
+        function Opposite() {
+            for(let i=0;i<languagename.length;i++)
+            {
+                languagename[i].checked=!(languagename[i].checked);
+            }
+        }
+    </script>
+</head>
+<body>
+      Favorite language :
+        <input type="checkbox" name="language" value="C++">C++
+        <input type="checkbox" name="language" value="Java">Java
+        <input type="checkbox" name="language" value="JS">JavaScript
+        <br/>
+        <button onclick="checkalll()">ALL</button>
+        <button onclick="Not()">Not</button>
+        <button onclick="Opposite()">opposite</button>
+</body>
+</html>
